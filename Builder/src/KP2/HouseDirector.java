@@ -2,7 +2,7 @@ package KP2;
 
 public class HouseDirector {
 	
-	private BuildingBuilder bBuilder = null;
+	private BuildingBuilder bBuilder;
 	
 	public HouseDirector(BuildingBuilder bBuilder){
 		

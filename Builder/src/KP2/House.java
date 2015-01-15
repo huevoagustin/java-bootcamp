@@ -2,7 +2,7 @@ package KP2;
 
 public class House implements BuildingBuilder{
 
-	Building building;
+	private Building building;
 	
 	public House(){
 		
