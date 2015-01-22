@@ -1,11 +1,12 @@
 package com.playlist;
 
+// context
 public class AudioPlayer {
 	
 	private PlayerState pState;
 	
 	public AudioPlayer(){
-		pState = null;
+		this.pState = new Stop();
 	}
 	
 	public void setState(PlayerState pState){
@@ -16,4 +17,5 @@ public class AudioPlayer {
 		return pState;
 	}
 
+	
 }

@@ -1,22 +1,29 @@
 package com.playlist;
 
 import java.util.Scanner;
-
+// concrete state
 public class Stop implements PlayerState{
 
-	
-	public void execute(AudioPlayer aPlayer) {
-		System.out.println(" Stop!");
-		aPlayer.setState(this);
-		System.out.println("<(p)lay>");
-		Scanner in = new Scanner(System.in);
-		String action;
-		action = in.next();
-		switch (action){
-		case "p": 
-			PlayerState play = new Play();
-			play.execute(aPlayer); break;
-		}
+	@Override
+	public void play(AudioPlayer context) {
+		context.setState(new Play());
+		System.out.println(">Playing..");
+		
 	}
+
+	@Override
+	public void pause(AudioPlayer context) {
+		System.out.println("you can't pause");
+		this.stop(context);
+	}
+
+	@Override
+	public void stop(AudioPlayer context) {
+		System.out.println("it is Stop now!");
+		
+	}
+
+	
+	
 
 }
